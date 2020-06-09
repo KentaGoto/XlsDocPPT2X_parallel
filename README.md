@@ -13,4 +13,4 @@ A directory with __copy attached at the end of the specified directory is create
 # Requirements  
 - Windows 10  
 - Python 3.6.2 or more  
-- PowerPoint, Word, Excel \*32bit
+- PowerPoint, Word, Excel **\*32-bit environment**
