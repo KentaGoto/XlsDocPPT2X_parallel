@@ -8,7 +8,7 @@ A directory with __copy attached at the end of the specified directory is create
 
 # Usage  
 1. Run **XlsDocPPT2X_parallel.exe**  
-2. Drag and drop folders  
+2. Drag and drop folder  
 
 # Screen image  
 ![image](https://user-images.githubusercontent.com/10069642/84092304-eaf0f200-aa31-11ea-98bd-897b5c09f5f4.png)  
