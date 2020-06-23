@@ -6,10 +6,12 @@ from win32com.client import *
 from multiprocessing import Pool, freeze_support
 from time import time
 
+
 def all_files(directory):
     for root, dirs, files in os.walk(directory):
         for file in files:
             yield os.path.join(root, file)
+
 
 def doc2docx(doc_fullpath):
     word = win32com.client.Dispatch("Word.Application")
@@ -24,7 +26,9 @@ def doc2docx(doc_fullpath):
     doc = word.Documents.Open(doc_fullpath)
     doc.SaveAs(dirname + '/' + fname + '.docx', FileFormat=16)
     doc.Close()
+    word.Quit()
     return dirname + '/' + fname + '.docx'
+
 
 def ppt2pptx(ppt_fullpath):
     powerpoint = win32com.client.DispatchEx("PowerPoint.Application")
@@ -37,7 +41,9 @@ def ppt2pptx(ppt_fullpath):
     ppt = powerpoint.Presentations.Open(ppt_fullpath, False, False, False)
     ppt.SaveAs(dirname + '/' + fname + '.pptx')
     ppt.Close()
+    powerpoint.Quit()
     return dirname + '/' + fname + '.pptx'
+
 
 def xls2xlsx(xls_fullpath):
     excel = win32com.client.Dispatch("Excel.Application")
@@ -51,7 +57,9 @@ def xls2xlsx(xls_fullpath):
     xls = excel.Workbooks.Open(xls_fullpath)
     xls.SaveAs(dirname + '/' + fname + '.xlsx', FileFormat=51)
     xls.Close()
+    excel.Quit()
     return dirname + '/' + fname + '.xlsx'
+
 
 def genarate_x(path):
     dirname = os.path.dirname(path)
@@ -59,14 +67,15 @@ def genarate_x(path):
     fname, ext = os.path.splitext(current_file)
     os.chdir(dirname)
     if ext == '.doc':
-        docx = doc2docx(dirname + '/' + current_file)
+        doc2docx(dirname + '/' + current_file)
         os.remove(dirname + '/' + current_file)
     elif ext == '.ppt':
-        pptx = ppt2pptx(dirname + '/' + current_file)
+        ppt2pptx(dirname + '/' + current_file)
         os.remove(dirname + '/' + current_file)
     elif ext == '.xls':
-        xlsx = xls2xlsx(dirname + '/' + current_file)
+        xls2xlsx(dirname + '/' + current_file)
         os.remove(dirname + '/' + current_file)
+
 
 if __name__ == '__main__':
     freeze_support()
