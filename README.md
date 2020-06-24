@@ -11,7 +11,7 @@ A directory with __copy attached at the end of the specified directory is create
 2. Drag and drop folder  
 
 # Screen image  
-![image](https://user-images.githubusercontent.com/10069642/84092304-eaf0f200-aa31-11ea-98bd-897b5c09f5f4.png)  
+![image](https://user-images.githubusercontent.com/10069642/85479544-540f6280-b5f9-11ea-92b5-474bf50a08e8.png)  
 
 # Note  
 - An error will occur if the target file is damaged.  
