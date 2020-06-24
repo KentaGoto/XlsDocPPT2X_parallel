@@ -7,7 +7,7 @@ xls -> xlsx
 A directory with __copy attached at the end of the specified directory is created in the same location, and the converted file is placed in it. Processed in parallel. 
 
 # Usage  
-1. Run **XlsDocPPT2X_parallel.exe**  
+1. Run **XlsDocPPT2X_parallel.py**  
 2. Drag and drop folder  
 
 # Screen image  
