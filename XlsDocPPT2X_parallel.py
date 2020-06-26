@@ -1,5 +1,4 @@
 import os
-import sys
 import shutil
 import win32com
 from win32com.client import *
@@ -99,4 +98,7 @@ if __name__ == '__main__':
         pool.close()
 
     print('Done!\n')
-    print('{}s'.format(time() - start))
+    sec = '{}'.format(time() - start)
+    sec = float(sec)
+    sec_r = round(sec, 2)
+    print(str(sec_r) + 's')
