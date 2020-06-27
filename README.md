@@ -18,6 +18,6 @@ A directory with __copy attached at the end of the specified directory is create
 - If a password has been set for the file, it cannot be processed.  
 
 ## Requirements  
-- Windows 10  
+- Windows  
 - Python 3.6.2 or more  
 - PowerPoint, Word, Excel **\*32-bit** environment
