@@ -21,3 +21,6 @@ A directory with __copy attached at the end of the specified directory is create
 
 ## License
 MIT
+
+## Author  
+Kenta Goto
